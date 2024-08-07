@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Apostas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Apostas</h1>
+        <div class="form-group">
+            <label for="saldo">Saldo Total:</label>
+            <input type="number" id="saldo" placeholder="Insira o saldo total">
+        </div>
+        <div class="form-group">
+            <label for="percentualMinimo">Porcentagem Mínima para Apostas Arriscadas:</label>
+            <input type="number" id="percentualMinimo" placeholder="Insira a porcentagem mínima" step="0.01" min="0" max="100">
+        </div>
+        <div id="apostas-container">
+            <div class="aposta">
+                <h3>Aposta 1</h3>
+                <div class="form-group">
+                    <label for="oddsFavorito-1">Odds do Favorito:</label>
+                    <input type="number" step="0.01" id="oddsFavorito-1" class="oddsFavorito" placeholder="Insira as odds do favorito">
+                </div>
+                <div class="form-group">
+                    <label for="oddsAzarão-1">Odds do Azarão:</label>
+                    <input type="number" step="0.01" id="oddsAzarão-1" class="oddsAzarão" placeholder="Insira as odds do azarão">
+                </div>
+            </div>
+        </div>
+        <button id="adicionarAposta">Adicionar Aposta</button>
+        <button id="calcularAposta">Calcular Aposta</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

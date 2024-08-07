@@ -1,0 +1,165 @@
+/* Definindo uma paleta de cores */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --button-color: #3498db;
+    --button-hover-color: #2980b9;
+    --input-border-color: #bdc3c7;
+    --input-focus-color: #3498db;
+    --container-bg-color: #ffffff;
+    --container-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    margin: 1rem;
+    background-color: var(--container-bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px var(--container-shadow-color);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s;
+    
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Estilo dos inputs */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--input-border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--input-focus-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilo dos botões */
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--button-color), var(--button-hover-color));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--button-hover-color), var(--button-color));
+    transform: translateY(-3px);
+}
+
+/* Estilo para os resultados */
+#resultado {
+    margin-top: 30px;
+}
+
+.resultado-aposta {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px var(--container-shadow-color);
+    transition: transform 0.3s;
+}
+
+.resultado-aposta:hover {
+    transform: translateY(-3px);
+}
+
+.resultado-aposta h4 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.resultado-aposta p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Estilo para cada aposta */
+.aposta {
+    margin-bottom: 20px;
+}
+
+.aposta h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.aposta h3:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .form-group input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .resultado-aposta p {
+        font-size: 12px;
+    }
+
+    .aposta h3 {
+        font-size: 16px;
+    }
+}
